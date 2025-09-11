@@ -16,22 +16,18 @@ NumpadDiv::  ; la tecla /
         Menu, ClienteMenu, Add, Urbano (U), ClienteU
         Menu, ClienteMenu, Add, HyR (H), ClienteH
         Menu, ClienteMenu, Show
-
         return  ; esperar selección
     }
     else {
         ; --- Secuencia estándar ---
         Send, {Tab}
         Send, 2
-
         ; Flechas arriba según UPS
         Loop, %ups%
             Send, {Up}
-
         ; 4 Tabs
         Loop, 4
             Send, {Tab}
-
         ; Cliente
         Send, %cliente%
     }
