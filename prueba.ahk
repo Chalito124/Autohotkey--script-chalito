@@ -2,7 +2,7 @@
 #SingleInstance Force
 FileEncoding, UTF-8
 
-delay := 150   ; tiempo de espera entre pasos en ms
+delay := 200   ; tiempo de espera entre pasos en ms
 cliente := ""
 ups := 0
 
@@ -86,10 +86,9 @@ return
 ; SECUENCIA NUMPAD MULT
 ; ===========================
 NumpadMult::
-    SetTitleMatchMode, 2
-    ControlSend, , ^w, NombreDeLaVentana  ; Reemplaza con el título de la ventana
+    Send, ^w
     Sleep, 500
-    ControlSend, , {F5}, NombreDeLaVentana
+    Send, {F5} 
     Sleep, 500
-    ControlSend, , {Tab 3}, NombreDeLaVentana
+    Send, {Tab 3}
 return
